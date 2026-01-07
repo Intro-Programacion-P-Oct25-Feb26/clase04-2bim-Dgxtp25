@@ -17,7 +17,8 @@ public class Ejemplo03 {
                                          // obtenerSuma
         System.out.printf("El valor de la suma es: %d\n", valor);
         
-        // System.out.printf("El valor de la suma es: %d\n", obtenerSuma(10, 30));
+         System.out.printf("El valor de la suma es: %d\n", obtenerSuma(10, 30));
+         //No sirve debido a que no devuelve ningun valor
     }
     
     
