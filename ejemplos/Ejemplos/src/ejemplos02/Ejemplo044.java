@@ -9,23 +9,22 @@ package ejemplos02;
  *
  * @author reroes
  */
-public class Ejemplo042 {
+public class Ejemplo044 {
 
     public static void main(String[] args) {
 
         int[][] arreglo1 = {
             {1, 2, 3},
-            {3, 2, 4},
-            {2, 6, 2}
+            {4, 5, 6},
+            {7, 8, 9}
         };
 
         int[][] arreglo2 = {
             {1, 2, 3},
-            {2, 2, 2},
-            {3, 1, 2}
+            {4, 5, 6},
+            {7, 8, 9}
         };
 
-       
         int[][] arreglo3 = llenarMatriz(arreglo1, arreglo2);
 
         obtenerReporte(arreglo1);
@@ -33,7 +32,6 @@ public class Ejemplo042 {
         obtenerReporte(arreglo3);
     }
 
-   
     public static int[][] llenarMatriz(int[][] x, int[][] y) {
         int[][] z = new int[3][3];
 
@@ -48,13 +46,12 @@ public class Ejemplo042 {
     public static void obtenerReporte(int[][] arreglo) {
         String cadena = "";
 
-        for (int[] arreglo1 : arreglo) {
-            for (int j = 0; j < arreglo1.length; j++) {
-                cadena = String.format("%s%d\t", cadena, arreglo1[j]);
+        for (int i = 0; i < arreglo.length; i++) {
+            for (int j = 0; j < arreglo[i].length; j++) {
+                cadena += arreglo[i][j] + "\t";
             }
-            cadena = String.format("%s\n", cadena);
+            cadena += "\n";
         }
-
         System.out.println(cadena);
     }
 
@@ -62,4 +59,3 @@ public class Ejemplo042 {
         return a * b;
     }
 }
-
